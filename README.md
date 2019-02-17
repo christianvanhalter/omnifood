@@ -1,3 +1,3 @@
-## Survey Form
-Omni Food, a creative proyect.
+## Omnifood Web Page
+It's a final creative project from a course of HTML and CSS.
 
