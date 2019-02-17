@@ -1,0 +1,169 @@
+/*
+Orange color: #e67e22
+
+*/
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    background: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* hará que el texto se renderice a la perfección */
+}
+
+
+/* --------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------------- */
+.row
+{
+    max-width: 1140px;
+    margin: 0 auto; /* top-bottom: 0, left-right: auto */
+}
+
+
+/* ----- HEADINGS ----- */
+h1
+{
+    margin-top: 0; /* elimina el margin de normalize.css*/
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%; /* 200% = 40px */
+    font-weight: 300;
+    text-transform: uppercase;
+    word-spacing: 4px; /* espacio entre palabras */
+    letter-spacing: 1px; /* espacio entre caracteres */
+}
+
+
+/* ----- BUTTONS ----- */
+/* link = boton en estado normal */
+/* visited = botón después de haberlo visitado */
+.btn:link,
+.btn:visited
+{
+    display: inline-block; /* convertimos en bloque al elemento 'a' que es en línea, para otorgarle padding */
+    padding: 10px 30px; /* 10px top - bottom | 30px left - right */
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    /* transición para el cambio de color en hover */
+}
+
+.btn-full:link,
+.btn-full:visited
+{
+    background: #e67e22;
+    border: 1px solid #e67e22; /* borde para que comparta la misma altura que el otro botón */
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited
+{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+/* btn hover = estado cuando pasas el mouse sobre el btn */
+/* active = estado cuando haces click en el botón*/
+.btn:hover,
+.btn:active
+{
+    background: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active
+{
+    border: 1px solid #cf6d17; /* borde para que comparta la misma altura que el otro botón */
+}
+
+.btn-ghost:hover,
+.btn-ghost:active
+{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/* --------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------- */
+
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-size: cover; /* para que se vea la imagen completa y no tan zoomeada */
+    background-position: center; /* centra la img */
+    height: 100vh; /* 100% del view port heigh */
+    background-attachment: fixed;
+}
+
+.hero-text-box
+{
+    position: absolute; /* para centrarla horizontal y verticalmente */
+    width: 1140px;
+    top: 50%; /* centramos el texto */
+    left: 50%; /* centramos el texto */
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* trick que traslada el elemento la mitad de su ancho y la mitad de su alto arriba hacía la iziquierda */
+}
+
+.logo
+{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+/* Main navi */
+.main-nav
+{
+    float: right;
+    list-style: none; /* elimina los bullets a la lista */
+    margin-top: 55px;
+}
+
+.main-nav li
+{
+    display: inline-block; /* permite agregar padding y que estén uno al lado del otro */
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited
+{
+    padding: 8px 0px; /* top-bottom: 8px | left-right: 0px */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* 20px html font-size dividido en 18px == 0.9 (90%)*/
+    border-bottom: 2px solid transparent; /* transparent = no será visible hasta que realmente lo pasemos*/
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active
+{
+    border-bottom: 2px solid #e67e22; /* borde naranjo en los links */
+}
