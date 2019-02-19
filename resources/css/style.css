@@ -234,3 +234,56 @@ header
 {
     border-bottom: 2px solid #e67e22; /* borde naranjo en los links */
 }
+
+/* --------------------------------------------- */
+/* FEATURES */
+/* --------------------------------------------- */
+.section-features .long-copy
+{
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------- */
+/* MEALS */
+/* --------------------------------------------- */
+
+.section-meals
+{
+    padding: 0;
+}
+
+.meals-showcase
+{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li
+{
+    display: block;
+    float: left;
+    width: 25%; /* 25% es la medida para que quepan 4 elementos en un ancho de 100% */
+    background: #000;
+}
+
+.meal-photo
+{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /* esta propiedad corrige el desbordamiento del elemento hijo img con 'scale' */
+}
+
+.meal-photo img
+{
+    opacity: 0.7; /* 70% opacidad (aclara la imagen) */
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); /* la img será de 115% más grande: se saldrán del ancho del browser */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover
+{
+    opacity: 1;
+    transform: scale(1.03); /* la img será cerca de 100%, es decir, volverá a su estado original, ya que scale(1) dejará una franja blanca. */
+}
