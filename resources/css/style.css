@@ -24,6 +24,20 @@ html
     text-rendering: optimizeLegibility; /* hará que el texto se renderice a la perfección */
 }
 
+.clearfix
+{
+    zoom: 1;
+}
+
+.clearfix:after
+{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+}
 
 /* --------------------------------------------- */
 /* REUSABLE COMPONENTS */
@@ -114,6 +128,39 @@ h2:after
     color: #e67e22;
     margin-bottom: 10px;
 }
+
+.icon-small
+{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    /* secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ----- BUTTONS ----- */
+a:link,
+a:visited
+{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active
+{
+    color:#555;
+    border-bottom: 1px solid transparent;
+}
+
 
 
 /* ----- BUTTONS ----- */
@@ -286,4 +333,83 @@ header
 {
     opacity: 1;
     transform: scale(1.03); /* la img será cerca de 100%, es decir, volverá a su estado original, ya que scale(1) dejará una franja blanca. */
+}
+
+/* --------------------------------------------- */
+/* HOW IT WORKS */
+/* --------------------------------------------- */
+.section-steps
+{
+    background: #f4f4f4;
+}
+
+.steps-box:first-child /* selecciona el primer "steps-box" que enuentre en el DOM */
+{
+    text-align: right; /* funciona para todos los elementos inlineblock elements como la imagen. */
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child /* selecciona el último "steps-box" que enuentre en el DOM */
+{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen
+{
+    width: 40%;
+}
+
+.works-step
+{
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type /* funciona similar a :last-child */
+{
+    margin-bottom: 80px;
+}
+
+.works-step div
+{
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* aseguramos que el elemento no fuerce un salto de línea así puede estar al lado del elemento texto */
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited
+{
+    border: 0;
+}
+
+.btn-app img
+{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* --------------------------------------------- */
+/* CITIES */
+/* --------------------------------------------- */
+.box img
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature
+{
+    margin-bottom: 5px;
 }
