@@ -258,6 +258,15 @@ header
     margin-top: 20px;
 }
 
+.logo-black
+{
+    display: none; /* se mantiene oculto el logo negro */
+    height: 50px; /* para que tenga la misma altura que el nav */
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
 /* Main navi */
 .main-nav
 {
@@ -289,6 +298,40 @@ header
 .main-nav li a:active
 {
     border-bottom: 2px solid #e67e22; /* borde naranjo en los links */
+}
+
+/* Sticky navi */
+.sticky
+{
+    position: fixed; /* se mantiene siempre en el mismo lugar, independiente del scrolling */
+    top: 0; /* lugar donde comenzará el nav: en el 0,0 */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 2px #efefef; /* X axis, Y axis, blur, color */
+    z-index: 9999; /* posicona un elemento más adelante o más atrás de otros (9999 val máximo) */
+}
+
+.sticky .main-nav
+{
+    margin-top: 18px; /* bajamos el margin top a la navegación */
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited
+{
+    padding: 17px 0; /* top-bottom: 8px | left-right: 0px */ /* 16px para aumentar el espacio entre la barra de color y el texto de los links  */
+    color: #555;
+}
+
+.sticky .logo
+{
+    display: none; /* ocultamos el logo blanco en modo sticky */
+}
+
+.sticky .logo-black
+{
+    display: block; /* cuando este en sticky de display none, pasará a block y se mostrará */
 }
 
 
