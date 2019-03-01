@@ -300,6 +300,24 @@ header
     border-bottom: 2px solid #e67e22; /* borde naranjo en los links */
 }
 
+
+/* Mobile navi */
+.mobile-nav-icon
+{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer; /* sin esto el elemento a sin href no tendrá un cursor al hover */
+    display: none;
+}
+
+.mobile-nav-icon i
+{
+    font-size: 200%;
+    color: #fff;
+}
+
+
+
 /* Sticky navi */
 .sticky
 {
@@ -308,7 +326,8 @@ header
     left: 0;
     width: 100%;
     background-color: rgba(255,255,255,0.98);
-    box-shadow: 0 2px 2px #efefef; /* X axis, Y axis, blur, color */
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef; /* X axis, Y axis, blur, color */
     z-index: 9999; /* posicona un elemento más adelante o más atrás de otros (9999 val máximo) */
 }
 
@@ -717,4 +736,30 @@ footer p
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+
+/* --------------------------------------------- */
+/* Animations */
+/* --------------------------------------------- */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0; /* el elemento es invisible: lo usamos porque es animación con fadeIn */
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s; /* aumentamos la velocidad de la animación */
+}
+
+.js--wp-4
+{
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1.animated, /* es un selector que trabaja con 2 propiedades al mismo tiempo */
+.js--wp-2.animated,
+.js--wp-3.animated
+{
+    opacity: 1; /* lo hacemos visible */
 }
